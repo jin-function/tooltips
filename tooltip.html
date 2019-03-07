@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> tooltips </title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="tooltips.js"></script>
+	<link rel="stylesheet" type="text/css" href="tooltip.css"/>
+</head>
+	<!-- LapTop keyboard -->
+	<div>
+	    <style type="text/css">
+	    	* { margin:0; }
+	    	ul {  padding: 0; list-style: none; text-align: center; margin: 50px 0; }
+	    	ul li { display: inline-block; width: 50px; height: 50px; background: #ddd; margin:5px; cursor: pointer;}
+
+	    	.small { width: 100%; }
+	    	.small ul { width: 200px; margin:0 auto; border:1px solid #ddd;}
+
+	    </style>
+	    <!-- tooltip-wrapper --> 
+	    <div class="block-btn tooltip-wrapper">
+	        <ul>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="버튼 A 메롱메롱메롱 &#10 메롱">
+	                <span> A </span>
+	            </li>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="버튼 B 마카롱마카롱 &#10 마카롱 ">
+	                <span> B </span>
+	            </li>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="버튼 C 워터멜론워터멜론 &#10 워터멜론">
+	                <span> C </span>
+	            </li>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="버튼 D 나이롱나이롱 &#10 나이롱">
+	                <span> D </span> 
+	            </li>
+	        </ul>
+	    </div>
+
+	    <!-- none tooltip-wrapper --> 
+	    <div class="block-btn">
+	        <ul>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="none wraper tooltips A &#10 메롱">
+	                <span> A </span>
+	            </li>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="none wraper tooltips B &#10 마카롱 ">
+	                <span> B </span>
+	            </li>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="none wraper tooltips C &#10 워터멜론">
+	                <span> C </span>
+	            </li>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="none wraper tooltips D &#10 나이롱">
+	                <span> D </span> 
+	            </li>
+	        </ul>
+	    </div>
+
+		<!-- wrap box sizing --> 
+	    <div class="block-btn tooltip-wrapper small">
+	        <ul>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="버튼 A 메롱메롱메롱 &#10 메롱">
+	                <span> A </span>
+	            </li>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="버튼 B 마카롱마카롱 &#10 마카롱 ">
+	                <span> B </span>
+	            </li>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="버튼 C 워터멜론워터멜론 &#10 워터멜론">
+	                <span> C </span>
+	            </li>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="버튼 D 나이롱나이롱 &#10 나이롱">
+	                <span> D </span> 
+	            </li>
+	        </ul>
+	    </div>
+
+	</div>
+<body>
+
+	<script type="text/javascript">
+		new Tooltip('[data-toggle="tooltip"]');
+	</script>
+	
+</body>
+</html>
