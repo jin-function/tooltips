@@ -17,15 +17,9 @@ ex ) 〈span data-toggle="tooltip" title="example tooltip"〉example〈/span〉
 1. table과 같은 구조.
 
 〈table〉<br>
-    〈td〉<br>
-        〈span data-toggle="tooltip" title="example tooltip"〉〈/span〉<br>
-    〈/td〉<br>
-    〈td〉<br>
-        〈span data-toggle="tooltip" title="example tooltip"〉〈/span〉<br>
-    〈/td〉<br>
-    〈td〉<br>
-        〈span data-toggle="tooltip" title="example tooltip"〉〈/span〉<br>
-    〈/td〉<br>
+	〈td〉<br>
+		〈span data-toggle="tooltip" title="example tooltip"〉〈/span〉<br>
+	〈/td〉<br>
 〈table〉<br>
 
 html에서 table내에는 tr,td,th 등등의 table 형태가 아닌 elment가 삽입 될 경우 
