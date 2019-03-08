@@ -47,8 +47,8 @@ function Tooltip(e){
         Selecter_Checker();
 
         //let wrap = $('body');
-        let PT = wrap.position().top;
-        let PL = wrap.position().left;
+        let PT = wrap.offset().top;
+        let PL = wrap.offset().left;
         let W = Jthis.outerWidth(true);
         let H = Jthis.outerHeight(true);
         let T = Jthis.position().top;
@@ -78,15 +78,20 @@ function Tooltip(e){
         let TW = tooltip.find('.title').width();          // 보여지는 크기
                  tooltip.find('.title').css('width',TW);
             TW = tooltip.find('.title').outerWidth(true); // 실제 크기를 할당해 left 값을 계산한다.
+        
+        let TH       = tooltip.find('.title').outerHeight(true);
 
         let center = (TW - data.set['Width'])/2;         // Tooltip Width - Selecter Width / 2; (center) 
         let Left     = data.set['Left'] - center;        // center left 값.
         let W        = TW+Left;
         let PW       = data.parent.width();
         let Over     = W > PW ? W-PW:0;
-        let TH       = tooltip.find('.title').outerHeight(true);
-        let TLeft    = Left < 0 ? 10:Over > 0 ? ((Over+10)*(-1)) +Left:'auto'; // 컨텐츠를 벗어날 경우 내부로. 
+        var inleft   = ((Over+10)*(-1)) + Left;
+        let TLeft    = Left <= 0 ? 10:Over > 0 ? inleft:'auto'; // 컨텐츠를 벗어날 경우 내부로. 
         let top      = wrapChecker ? data.set['Top'] + data.set['PTop']:data.set['Top']; 
+
+        Left += data.set['PLeft'];
+        TLeft += data.set['PLeft'];
 
         tooltip.offset({top:top});
         tooltip.offset({left:Left});
