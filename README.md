@@ -17,7 +17,7 @@ ex ) <span data-toggle="tooltip" title="example tooltip"></span>
 아래와 같은 구조에서 사용시 몇가지 주의해야할 점들이 있습니다.
 1. table과 같은 구조.
 
-<table>
+"<table>
     <td>
         <span data-toggle="tooltip" title="example tooltip"></span>
     </td>
@@ -27,7 +27,7 @@ ex ) <span data-toggle="tooltip" title="example tooltip"></span>
     <td>
         <span data-toggle="tooltip" title="example tooltip"></span>
     </td>
-</table>
+</table>"
 
 html에서 table내에는 tr,td,th 등등의 table 형태가 아닌 elment가 삽입 될 경우 
 추가되는(tooltip-box) elment의 위치를 명확히 파악 할 수 없습니다.
@@ -36,7 +36,7 @@ html에서 table내에는 tr,td,th 등등의 table 형태가 아닌 elment가 �
 대부분의 상황에서 <div class="tooltip-wrapper"></div> 를 사용하지 않아도 정상적으로 작동하지만
 아래와 같이 사용하길 권장합니다.
 
-<div class="tooltip-wrapper">
+"<div class="tooltip-wrapper">
     <table>
         <td>
             <span data-toggle="tooltip" title="example tooltip"></span>
@@ -48,7 +48,7 @@ html에서 table내에는 tr,td,th 등등의 table 형태가 아닌 elment가 �
             <span data-toggle="tooltip" title="example tooltip"></span>
         </td>
     </table>
-</div>
+</div>"
 
 
 수정하기.
