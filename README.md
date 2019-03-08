@@ -2,7 +2,7 @@
 
 tooltip 사용법
 
-1. 프로젝트에 tooltips.js, ooltips.css 를 추가하세요.
+1. 프로젝트에 tooltips.js, tooltips.css 를 추가하세요.
 
 2. 원하는 elment를 tooltip 요소로 만들기 위해서는 그저 data-toggle="tooltip"만 선언만하면 됩니다.
 
