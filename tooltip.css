@@ -2,7 +2,7 @@
 .tooltip-wrapper { position: relative; }
 
 .tooltip-box { 
-    position: fixed; 
+    position: absolute; 
     margin:2px 0; 
     right:auto; 
     bottom: auto; 
@@ -27,7 +27,7 @@
     content: " "; 
     position: absolute; 
     border-left: 6px solid transparent;
-    border-bottom: 6px solid #ff3232; 
+    border-bottom: 6px solid #00ba7a; 
     border-right: 6px solid transparent; 
     top:-5px; 
     left: 50%; 
@@ -37,7 +37,7 @@
 .tooltip-box .title { 
     position: relative; 
     padding: 7px 8px; 
-    background-color: #ff3232; 
+    background-color: #00ba7a; 
     color: #fff;
     border: 1px solid; 
     border-color: #fff; 
@@ -46,4 +46,30 @@
     white-space: pre-wrap;
     word-wrap: break-word; 
     text-align: center; 
+}
+
+.tooltip-box.over:before { 
+    content: " "; 
+    position: absolute; 
+    border-left: 8px solid transparent;
+    border-top: 8px solid #fff;
+    border-bottom: 0px; 
+    border-right: 8px solid transparent; 
+    top:auto;
+    bottom:-7px;
+    left: 50%; 
+    margin-left: -8px;
+}
+
+.tooltip-box.over:after { 
+    content: " "; 
+    position: absolute; 
+    border-left: 6px solid transparent;
+    border-top: 6px solid #00ba7a;
+    border-bottom: 0px;  
+    border-right: 6px solid transparent; 
+    top:auto; 
+    bottom:-5px;
+    left: 50%; 
+    margin-left: -6px;
 }

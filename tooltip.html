@@ -6,16 +6,20 @@
 	<script type="text/javascript" src="tooltips.js"></script>
 	<link rel="stylesheet" type="text/css" href="tooltip.css"/>
 </head>
+<body>
 	<!-- LapTop keyboard -->
 	<div>
 	    <style type="text/css">
 	    	* { margin:0; }
-	    	ul {  padding: 0; list-style: none; text-align: center; margin: 50px 0; }
+	    	h3 { width: 200px; margin: 10px auto; }
+	    	ul {  padding: 0; list-style: none; text-align: center; margin: 20px 0; border:1px solid #ddd; width: 200px; margin: 100px auto; margin-top:0;}
 	    	ul li { display: inline-block; width: 50px; height: 50px; background: #ddd; margin:5px; cursor: pointer;}
-	    	.small { width: 200px; margin:0 auto; border:1px solid #ddd;}	    	
+	    	.small { width: 200px; margin:0 auto;}	
+	    	.small ul { margin:0; }    	
 	    </style>
 	    <!-- none tooltip-wrapper --> 
 	    <div class="block-btn">
+	    	<h3> wrap none </h3>
 	        <ul>
 	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="none wraper tooltips A &#10 메롱">
 	                <span> A </span>
@@ -32,8 +36,28 @@
 	        </ul>
 	    </div>
 
-		<!-- tooltip-wrapper --> 
+	    <!-- none tooltip-wrapper --> 
+	    <div class="block-btn">
+	    	<h3> under line </h3>
+	        <ul style="padding-top:50px;">
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="none wraper tooltips A &#10 메롱">
+	                <span> A </span>
+	            </li>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="none wraper tooltips B &#10 마카롱 ">
+	                <span> B </span>
+	            </li>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="none wraper tooltips C &#10 워터멜론">
+	                <span> C </span>
+	            </li>
+	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="none wraper tooltips D &#10 나이롱">
+	                <span> D </span> 
+	            </li>
+	        </ul>
+	    </div>
+
+		<!-- tooltip-wrapper -->
 	    <div class="block-btn tooltip-wrapper small">
+	    	<h3> wrap </h3>
 	        <ul>
 	            <li class="btn btn-at jm-kb-b" data-chain-class="m-a" data-toggle="tooltip" title="버튼 A 메롱메롱메롱 &#10 메롱">
 	                <span> A </span>
@@ -49,13 +73,9 @@
 	            </li>
 	        </ul>
 	    </div>
-
 	</div>
-
 	<script type="text/javascript">
-		new Tooltip('[data-toggle="tooltip"]');
+		Tooltip('[data-toggle="tooltip"]');
 	</script>
-<body>
-	
 </body>
 </html>
