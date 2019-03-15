@@ -165,11 +165,5 @@ function Tooltip(e){
             seting.tooltip.top = under_top;
         }  
     }
-
-    function rightLine(data){
-         let vertical    = (data['theight'] - data['height'])/2;  // Tooltip Width - Selecter Width / 2; ( 세로 중앙 정렬 ) 
-         let mid_height  = data['top'] - vertical;                // center top 값. 
-    }
-
 }
 Tooltip('[data-toggle="tooltip"]');
