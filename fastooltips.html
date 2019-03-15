@@ -5,6 +5,9 @@
 </head>
 <body>
 	<style>
+		ul { list-style: none; }
+		ul li { width: 50px; padding: 15px 0px; background: #ddd; text-align: center; display: inline-block;}
+		
 		[data-tooltip] {
 			position: relative;
 		}
@@ -12,19 +15,35 @@
 		[data-tooltip]:hover:after {
 			content: attr(data-tooltip);
 		    position: absolute;
-			bottom: 100%;
-			left: 0;
-		    
-		    background-color: rgba(0, 0, 0, 0.8);
-			color: #FFFFFF;
-			font-size: 12px;
+		    top: 100%;
+		    left: 0;
+		    background-color: rgb(119, 0, 255);
+		    color: #FFFFFF;
+		    min-width: 150px;
+		    margin-top: 5px;
+		    padding: 5px;
+		    font-size: 12px;
+		    z-index: 10;
+		    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+		    border-radius: 5px;
+		}
 
-			z-index: 9999;
+		[data-tooltip]:hover:before {
+			content: " ";
+		    position: absolute;
+		    top: calc(100% + 1px);
+		    width: 8px;
+		    height: 8px;
+		    left: calc(50% - 4px);
+		    transform: rotate(45deg);
+		    background: rgb(119, 0, 255);
+		    box-shadow: -2px -2px 4px -2px rgba(0, 0, 0, 0.8);
+		    z-index: 11;
 		}
 	</style>
 	<ul>
 		<li data-tooltip="감자튀김의 주재료."> 감자 </li>
-		<li data-tooltip="고구마 맛탕의 주재료."></li>
+		<li data-tooltip="고구마 맛탕의 주재료."> 고구마 </li>
 	</ul>
 </body>
 </html>
