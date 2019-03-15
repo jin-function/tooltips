@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> fast tooltips </title>
+</head>
+<body>
+	<style>
+		[data-tooltip] {
+			position: relative;
+		}
+			
+		[data-tooltip]:hover:after {
+			content: attr(data-tooltip);
+		    position: absolute;
+			bottom: 100%;
+			left: 0;
+		    
+		    background-color: rgba(0, 0, 0, 0.8);
+			color: #FFFFFF;
+			font-size: 12px;
+
+			z-index: 9999;
+		}
+	</style>
+	<ul>
+		<li data-tooltip="감자튀김의 주재료."> 감자 </li>
+		<li data-tooltip="고구마 맛탕의 주재료."></li>
+	</ul>
+</body>
+</html>
