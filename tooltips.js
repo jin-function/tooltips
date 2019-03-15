@@ -93,17 +93,16 @@ function Tooltip(e){
 
         /* title 체크 */
         let Attrcheck = Jthis.data('toggle');
-        Jthis = typeof Attrcheck === 'undefined' ? Jthis.parents('[data-toggle="tooltip"]'):Jthis;
-        seting.title = typeof Jthis.attr('title') === 'undefined' ? seting.title:Jthis.attr('title'); //타이틀 미입력시.
+        Jthis = typeof Attrcheck == 'undefined' ? Jthis.parents('[data-toggle="tooltip"]'):Jthis;
+        seting.title = typeof Jthis.attr('title') == 'undefined' ? seting.title:Jthis.attr('title'); //타이틀 미입력시.
     }
 
     function tooltipSize(){
-        let findTitle = tooltip.find('.title');
-        let TW = findTitle.width();          // 보여지는 크기
-        findTitle.css('width',TW);
+        let TW = tooltip.find('.title').width();          // 보여지는 크기
+        tooltip.find('.title').css('width',TW);
 
-        seting.tooltip.width  = findTitle.outerWidth(true);
-        seting.tooltip.height = findTitle.outerHeight(true);
+        seting.tooltip.width  = tooltip.find('.title').outerWidth(true);
+        seting.tooltip.height = tooltip.find('.title').outerHeight(true);
     }
 
     // function tolltip_Line(data, line='under'){
@@ -117,15 +116,14 @@ function Tooltip(e){
         tooltip.addClass(seting.position)
                .offset({
                     top : seting.tooltip.top,
-                    left : seting.tooltip.left
+                    left:seting.tooltip.left
                })
                .css({
                     right : 'auto',
-                    bottom : 'auto',
-               }).
-               find('title').offset({
-                    left : seting.body.left
+                    bottom : 'auto'
                });
+
+        tooltip.find('.title').offset({left:seting.body.left});
         tooltip.css('opacity',1);
     }
 
@@ -166,4 +164,3 @@ function Tooltip(e){
         }  
     }
 }
-Tooltip('[data-toggle="tooltip"]');
